@@ -14,15 +14,7 @@ resultado = zerin / unzinho;
 resultado = resultado.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'});
 //console.log(resultado); // ele retorna uma string no toFixed
 
-const cifrao = '\u0024' // u --> caracter de escape
-const aMaiusculo = '\u0041'
-const tique = '\u2705'
-const hiragana = '\u3041'
-
-console.log(cifrao)
-console.log(aMaiusculo)
-console.log(tique)
-console.log(hiragana)
+// temos 5 tipos primitivos no js, number, estring, boolean, undefined e null
 
 //Math.round e toFixed()
 //  nan --> NOT A NUMBER
