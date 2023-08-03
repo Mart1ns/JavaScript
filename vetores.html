@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handjet&display=swap" rel="stylesheet">
+    <title>Vetores</title>
+</head>
+<body>
+    <header>
+        
+    <h1>Exercícios <img width="24" height="24" src="https://img.icons8.com/pastel-glyph/64/online-coding--v2.png" alt="online-coding--v2"/></h1>
+    </header>
+    <div id="botoes">
+     <ol >  
+    <li><button id="ex1" onclick="ex1()">Exercício 1</button></li>
+    <li><button id="ex2" onclick="entrada_ex2()">Exercício 2</button></li>
+    <li><button id="ex3" onclick="ex3()">Exercício 3</button></li>
+    <li><button id="ex3" onclick="ex4()">Exercício 4</button></li>
+    </ol>
+    </div>
+    <img id="cat" src="https://media0.giphy.com/media/exnOGAkUfpQVW/giphy.gif?cid=ecf05e47kf7jn4an9uikvj8t8mh0qqrmj2f7lzf4z44oyvwq&ep=v1_stickers_search&rid=giphy.gif&ct=s">
+    <h2 id="h1">Resposta:  </h2>
+    <script>
+
+        // Exercício 1
+
+        function ex1(){
+    
+            valores = []
+            resultado = 0
+            for(i = 0; i < 20; i++){
+                valores.push(Math.floor(Math.random() * 20))
+                resultado += valores[i]
+            }   
+
+            resultado = resultado / 20
+       
+
+            var saida = document.getElementById("teste").innerHTML = "Média: " 
+            + resultado
+            document.getElementById("h1").style.visibility = 'visible'
+
+            
+     
+        }
+
+        function entrada_ex2(){
+            valor = parseInt(window.prompt("Deseja quantos valores?"))
+            f_ex2(valor)
+        }
+
+        function f_ex2( valor){
+        
+            numeros = []
+            media = 0
+            for (let index = 1; index <= valor; index++) {
+                 var input = parseInt(window.prompt("Insira o " + index + "º  número"))
+                    numeros.push(input)
+                    media +=input
+                   
+            }
+            
+            
+           
+
+           media = numeros.length
+           maior = Math.max.apply(null,...numeros)
+           menor = Math.min.apply(null, ...numeros)
+           document.getElementById("h1").style.visibility = 'visible'
+           var saida = document.getElementById("teste").innerHTML = "Média:" + media
+           var maior = document.getElementById("teste1").innerHTML = "Maior valor:" + maior
+           var menor = document.getElementById("teste2").innerHTML = "Menor valor:" + menor
+
+        }
+
+        function ex3(){
+            a = parseInt(window.prompt("Informe o valor do lado A:"))
+            b = parseInt(window.prompt("Informe o valor do lado B:"))
+            c = parseInt(window.prompt("Informe o valor do lado C:"))
+            document.getElementById("h1").style.visibility = 'visible'
+
+            if(a + b < c ){
+                saida = document.getElementById("teste").innerHTML = "Condição Atendida"
+            }
+            else if(a + c < b){
+                saida = document.getElementById("teste").innerHTML = "Condição Atendida"
+            }
+            else if(b + c < c){
+                saida = document.getElementById("teste").innerHTML = "Condição Atendida"
+            } else {
+                saida = document.getElementById("teste").innerHTML = "Condição Não Atendida"
+            }
+
+
+        }
+
+        function ex4(){
+            capital = parseFloat(window.prompt("Informe o valor do capital:"))
+            juros = parseFloat(window.prompt("Informe a taxa de juros:"))
+            tempo = parseInt(window.prompt("Informe o perído:"))
+            montante = capital * ((1  + juros) ** tempo)
+            document.getElementById("h1").style.visibility = 'visible'
+            saida = document.getElementById("teste").innerHTML = "Valor do montante: "+montante
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </script>
+    
+    
+    <div id="aa">
+    <div id="teste"></div>
+    <div id="teste1"></div>
+    <div id="teste2"></div>
+  
+</div>
+</body>
+</html>
